@@ -1,4 +1,8 @@
 node {
+     stage('step into day-1'){
+	sh "cd day-1-ec2-create"
+     }
+
     stage('init') {
 	 sh 'terraform init'
     }  
