@@ -1,7 +1,5 @@
 node {
-    stage('checkout') {
-        git branch: 'main', url: 'https://github.com/Adapaka2023/Jenkins.git'
-    }
+   
     stage('init') {
         dir('day-1-ec2-create'){
             sh 'terraform init'
