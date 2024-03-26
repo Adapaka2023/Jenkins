@@ -1,14 +1,9 @@
 node {
-    
-    stage('checkout') { 
-        git branch: 'main', url: 'https://github.com/CloudTechDevOps/Terraform_CICD.git'
-    }
     stage('terraform') {
-		 dir('Day1-ec2-create'){
+		 
 				 sh 'terraform init'
 				 sh 'terraform plan'
 				 sh 'terraform ${action} --auto-approve'
-		 }
-    }
-    
+		
+    }  
 }
