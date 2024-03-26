@@ -1,9 +1,11 @@
 node {
-    stage('terraform') {
-		 
-				 sh 'terraform init'
-				 sh 'terraform plan'
-				 sh 'terraform ${action} --auto-approve'
-		
+    stage('init') {
+	 sh 'terraform init'
     }  
+    stage('plan') {		
+	 sh 'terraform plan'
+    } 
+   stage('choice') {
+	sh 'terraform ${action} --auto-approve'	
+    } 
 }
