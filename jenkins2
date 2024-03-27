@@ -1,5 +1,5 @@
 node {
-    stage('checkout') {
+    stage('check-out') {
         git branch: 'main', url: 'https://github.com/Adapaka2023/Jenkins.git'
     }
     stage('init') {
